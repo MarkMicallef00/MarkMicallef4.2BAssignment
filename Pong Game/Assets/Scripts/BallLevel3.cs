@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallLevel3 : MonoBehaviour
 {
 
-    public float ballVelocity = 2000;
+    public float ballVelocity = 1250;
 
     private Rigidbody rb;
     bool isPlay;
