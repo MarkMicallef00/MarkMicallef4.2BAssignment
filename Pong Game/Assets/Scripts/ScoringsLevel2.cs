@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scorings : MonoBehaviour
+public class ScoringsLevel2 : MonoBehaviour
 {
 
     public TextMesh currentBoolean;
@@ -17,6 +17,7 @@ public class Scorings : MonoBehaviour
     {
         ball = GameObject.FindGameObjectWithTag("Ball");
         currentBoolean.text = "" + score;
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -27,9 +28,9 @@ public class Scorings : MonoBehaviour
             Destroy(ball);
             (Instantiate(ballPrefeb, new Vector3(paddleObject.transform.position.x + 2, paddleObject.transform.position.y, 0), Quaternion.identity) as GameObject).transform.parent = paddleObject;
         }
-        if (score == 3)
+        if (score == 5)
         {
-            Application.LoadLevel(2);
+            Application.LoadLevel(3);
         }
     }
 }

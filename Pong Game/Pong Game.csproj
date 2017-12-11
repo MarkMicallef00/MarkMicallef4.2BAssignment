@@ -91,7 +91,9 @@
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\NewGame.cs" />
     <Compile Include="Assets\Scripts\Player2.cs" />
+    <Compile Include="Assets\Scripts\ScoringLevel3.cs" />
     <Compile Include="Assets\Scripts\Scorings.cs" />
+    <Compile Include="Assets\Scripts\ScoringsLevel2.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

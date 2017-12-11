@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-    public float speed = 8;
+    public float speed = 4;
     private Vector3 TargetPos;
-    Vector3 playerPosition;
+    Vector3 obsPosition;
     private GameObject ballObject;
 	// Use this for initialization
 	void Start () {
@@ -19,8 +19,8 @@ public class Enemy : MonoBehaviour {
         if(ballObject != null)
         {
             TargetPos = Vector3.Lerp(gameObject.transform.position, ballObject.transform.position, Time.deltaTime * speed);
-            playerPosition = new Vector3(-20, Mathf.Clamp(TargetPos.y, -12F, 12F), 0);
-            gameObject.transform.position = new Vector3(22, playerPosition.y, 0);
+            obsPosition = new Vector3(-11, Mathf.Clamp(TargetPos.y, -12F, 12F), 0);
+            gameObject.transform.position = new Vector3(0, obsPosition.y, 0);
         }
         
         
