@@ -10,13 +10,13 @@ public class ScoringsLevel2 : MonoBehaviour
     public Transform paddleObject;
 
     GameObject ball;
-    int score;
+    int score2;
 
     // Update is called once per frame
     void Update()
     {
         ball = GameObject.FindGameObjectWithTag("Ball");
-        currentBoolean.text = "" + score;
+        currentBoolean.text = "" + score2;
 
     }
 
@@ -24,11 +24,11 @@ public class ScoringsLevel2 : MonoBehaviour
     {
         if (other.tag == "Ball")
         {
-            score += 1;
+            score2 += 1;
             Destroy(ball);
             (Instantiate(ballPrefeb, new Vector3(paddleObject.transform.position.x + 2, paddleObject.transform.position.y, 0), Quaternion.identity) as GameObject).transform.parent = paddleObject;
         }
-        if (score == 5)
+        if (score2 == 5)
         {
             Application.LoadLevel(3);
         }

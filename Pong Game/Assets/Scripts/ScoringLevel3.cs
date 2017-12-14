@@ -9,13 +9,13 @@ public class ScoringLevel3 : MonoBehaviour
     public Transform paddleObject;
 
     GameObject ball;
-    int score;
+    int score3;
 
     // Update is called once per frame
     void Update()
     {
         ball = GameObject.FindGameObjectWithTag("Ball");
-        currentBoolean.text = "" + score;
+        currentBoolean.text = "" + score3;
 
     }
 
@@ -23,11 +23,11 @@ public class ScoringLevel3 : MonoBehaviour
     {
         if (other.tag == "Ball")
         {
-            score += 1;
+            score3 += 1;
             Destroy(ball);
             (Instantiate(ballPrefeb, new Vector3(paddleObject.transform.position.x + 2, paddleObject.transform.position.y, 0), Quaternion.identity) as GameObject).transform.parent = paddleObject;
         }
-        if (score == 7)
+        if (score3 == 7)
         {
             Application.LoadLevel(4);
         }
